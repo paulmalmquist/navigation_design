@@ -1,0 +1,84 @@
+<title>Mission Observatory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+
+<div id="app">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <canvas id="chart" aria-hidden="true"></canvas>
+
+  <header class="top">
+    <div class="brand"><span class="reticle" aria-hidden="true"></span><span>Observatory</span><span class="sep" aria-hidden="true">/</span><span class="sub">KPI &amp; progress</span></div>
+  </header>
+
+  <section id="overview" class="overview is-in" aria-labelledby="ovTitle">
+    <p class="eyebrow" id="ovEyebrow">Five programs</p>
+    <h1 id="ovTitle">Mission Overview</h1>
+    <p class="instr">Select a constellation to explore progress.</p>
+  </section>
+
+  <nav id="nav" aria-label="Destinations"><ul id="navList"></ul></nav>
+
+  <div id="hits" class="hits is-in"></div>
+
+  <section id="dest" class="dest" aria-labelledby="destTitle" inert>
+    <div class="dest-head">
+      <p class="kicker" id="destKicker"></p>
+      <h2 id="destTitle" tabindex="-1"></h2>
+      <p class="summary" id="destSummary"></p>
+    </div>
+    <div class="metrics" role="list">
+      <div class="metric" role="listitem" data-k="completed"><span class="num">0</span><span class="lab"><i class="st st-done" aria-hidden="true"></i>Completed</span></div>
+      <div class="metric" role="listitem" data-k="inProgress"><span class="num">0</span><span class="lab"><i class="st st-prog" aria-hidden="true"></i>In progress</span></div>
+      <div class="metric" role="listitem" data-k="backlog"><span class="num">0</span><span class="lab"><i class="st st-back" aria-hidden="true"></i>Backlog</span></div>
+    </div>
+    <div class="dest-foot">
+      <div class="actions">
+        <button class="cta" id="ctaTracker" type="button">View tracker <span class="arr" aria-hidden="true">→</span></button>
+        <a class="cta" id="ctaTrackerLink" href="#" target="_blank" rel="noopener" hidden>View tracker <span class="arr" aria-hidden="true">↗</span></a>
+        <button class="ghost" id="ctaOverview" type="button"><span aria-hidden="true">←</span> Overview</button>
+      </div>
+      <p class="caption" id="destCaption"></p>
+    </div>
+  </section>
+
+  <aside id="tracker" class="tracker" role="dialog" aria-modal="true" aria-labelledby="trTitle" hidden>
+    <div class="tr-top">
+      <button class="ghost" id="trBack" type="button"><span aria-hidden="true">←</span> Back to <span id="trBackName"></span></button>
+      <button class="ghost" id="trOverview" type="button">Overview</button>
+    </div>
+    <header class="tr-head">
+      <p class="kicker" id="trKicker">Tracker</p>
+      <h2 id="trTitle" tabindex="-1"></h2>
+      <p class="tr-sub" id="trSub"></p>
+    </header>
+    <div class="tr-filters" role="group" aria-label="Filter work items by status" id="trFilters"></div>
+    <div class="tr-list-wrap" id="trWrap">
+      <div class="tr-cols" aria-hidden="true"><span>Status</span><span>Work item</span><span>Owner</span><span>Next milestone</span></div>
+      <ul class="tr-list" id="trList"></ul>
+    </div>
+    <p class="tr-note">Preview generated from the demo data block. Give a program a <code>trackerUrl</code> to send “View tracker” to its existing page instead.</p>
+  </aside>
+
+  <footer class="foot">
+    <p class="demo"><span class="tag">Demo data</span><span id="footUpdated"></span></p>
+    <div class="foot-r">
+      <span class="keys" aria-hidden="true">1–5 jump · ← → step · Esc back</span>
+      <button id="motionBtn" class="motion" type="button" aria-pressed="false">Reduce motion</button>
+    </div>
+  </footer>
+
+  <div id="veil" aria-hidden="true"></div>
+  <p id="live" class="sr" aria-live="polite"></p>
+</div>
+
+<!-- Tracker data. tools/build.py inlines data/tracker-data.demo.json here; swap that file
+     (same shape) for the real feed. Counting rule: each work item counts once at the
+     destination's work-item level; "In Review" counts as In Progress. -->
+<script type="application/json" id="tracker-data">/* @inline:../data/tracker-data.demo.json */</script>
+
+<!-- Symbol distance-field texture (assets/relativity-symbol-sdf.png), inlined at build time -->
+<script>window.__TEX={symbol:"/* @inline-base64:../assets/relativity-symbol-sdf.png */"};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="observatory.js"></script>

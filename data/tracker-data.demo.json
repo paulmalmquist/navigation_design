@@ -1,0 +1,744 @@
+{
+  "meta": {
+    "isDemo": true,
+    "asOf": "2026-10-02T17:30:00-04:00",
+    "label": "Demo data · sample work items for the prototype"
+  },
+  "destinations": [
+    {
+      "id": "ai-initiatives",
+      "name": "AI Initiatives",
+      "tagline": "Incremental AI proofs of concept and a shared knowledge base, built on the ITAR-compliant GCP stack.",
+      "summary": "Moving the company toward AI-native work one proof of concept at a time: open-weight models on GKE, a growing engineering knowledge base, and copilots aimed at the slowest decision loops.",
+      "scope": "Q4 2026 · Enterprise AI portfolio",
+      "workItemLevel": "initiative",
+      "trackerUrl": null,
+      "items": [
+        {
+          "id": "AI-101",
+          "title": "Model-origin policy for ITAR-adjacent data",
+          "status": "Done",
+          "owner": "Data Architecture",
+          "milestone": "Annual policy review",
+          "due": "2027-01-15"
+        },
+        {
+          "id": "AI-102",
+          "title": "Engineering knowledge base v0: work instructions",
+          "status": "Done",
+          "owner": "Data Platform",
+          "milestone": "Usage review with Manufacturing",
+          "due": "2026-10-20"
+        },
+        {
+          "id": "AI-103",
+          "title": "Print anomaly triage assistant (POC)",
+          "status": "Done",
+          "owner": "Additive Data",
+          "milestone": "Go / no-go for pilot",
+          "due": "2026-10-17"
+        },
+        {
+          "id": "AI-104",
+          "title": "Prompt and evaluation harness on GKE",
+          "status": "Done",
+          "owner": "ML Platform",
+          "milestone": "Hand-off to platform on-call",
+          "due": "2026-10-10"
+        },
+        {
+          "id": "AI-105",
+          "title": "Decision-latency baseline across five key loops",
+          "status": "Done",
+          "owner": "Data Architecture",
+          "milestone": "Q4 re-measure",
+          "due": "2026-12-15"
+        },
+        {
+          "id": "AI-106",
+          "title": "Vector search on PostgreSQL (pgvector)",
+          "status": "Done",
+          "owner": "Data Platform",
+          "milestone": "HNSW index tuning",
+          "due": "2026-10-29"
+        },
+        {
+          "id": "AI-107",
+          "title": "Vertex AI scope check for ITAR Assured Workloads",
+          "status": "In Review",
+          "owner": "Security & Compliance",
+          "milestone": "Compliance sign-off",
+          "due": "2026-10-09"
+        },
+        {
+          "id": "AI-108",
+          "title": "Open-weight model serving on GKE",
+          "status": "In Progress",
+          "owner": "ML Platform",
+          "milestone": "Load test at 50 requests/s",
+          "due": "2026-10-16"
+        },
+        {
+          "id": "AI-109",
+          "title": "NCR disposition copilot (POC)",
+          "status": "In Progress",
+          "owner": "Quality Engineering",
+          "milestone": "Pilot with MRB board",
+          "due": "2026-10-21"
+        },
+        {
+          "id": "AI-110",
+          "title": "Test go / no-go summary agent",
+          "status": "In Progress",
+          "owner": "Test Data",
+          "milestone": "Dry run on stage test",
+          "due": "2026-10-28"
+        },
+        {
+          "id": "AI-111",
+          "title": "Supplier issue response drafting",
+          "status": "In Review",
+          "owner": "Supply Chain Systems",
+          "milestone": "Buyer acceptance test",
+          "due": "2026-10-14"
+        },
+        {
+          "id": "AI-112",
+          "title": "Knowledge base ingestion: test procedures",
+          "status": "In Progress",
+          "owner": "Data Platform",
+          "milestone": "Index 1,200 procedures",
+          "due": "2026-10-30"
+        },
+        {
+          "id": "AI-113",
+          "title": "Financial close variance explainer",
+          "status": "Backlog",
+          "owner": "Finance Systems",
+          "milestone": "Scoping workshop",
+          "due": "2026-11-06"
+        },
+        {
+          "id": "AI-114",
+          "title": "Work-order Q&A over MES (Manufacturo)",
+          "status": "Backlog",
+          "owner": "MES Integration",
+          "milestone": "Data access review",
+          "due": "2026-11-12"
+        },
+        {
+          "id": "AI-115",
+          "title": "Agent evaluation scorecards",
+          "status": "Backlog",
+          "owner": "ML Platform",
+          "milestone": "Define rubric",
+          "due": "2026-11-13"
+        },
+        {
+          "id": "AI-116",
+          "title": "Telemetry anomaly narratives (InfluxDB)",
+          "status": "Backlog",
+          "owner": "Test Data",
+          "milestone": "Feasibility spike",
+          "due": "2026-11-20"
+        },
+        {
+          "id": "AI-117",
+          "title": "Engineering change impact search",
+          "status": "Backlog",
+          "owner": "Data Architecture",
+          "milestone": "Choose pilot program",
+          "due": "2026-12-04"
+        },
+        {
+          "id": "AI-118",
+          "title": "AI usage and cost dashboard",
+          "status": "Backlog",
+          "owner": "Platform Ops",
+          "milestone": "Metrics spec",
+          "due": "2026-12-11"
+        },
+        {
+          "id": "AI-119",
+          "title": "Onboarding assistant for new engineers",
+          "status": "Backlog",
+          "owner": "People Systems",
+          "milestone": "Intake review",
+          "due": "2027-01-08"
+        }
+      ]
+    },
+    {
+      "id": "data-mart",
+      "name": "#DATA Mart",
+      "tagline": "Governed dbt marts that give MES, ERP, test and supply chain data one modeled home.",
+      "summary": "One modeled layer for manufacturing, finance, test and supply chain: conformed dimensions, contracted Kafka sources and a semantic layer that replaces one-off Power BI extracts.",
+      "scope": "Q4 2026 · Data platform marts",
+      "workItemLevel": "mart model",
+      "trackerUrl": null,
+      "items": [
+        {
+          "id": "DM-201",
+          "title": "dbt-core project scaffold and CI",
+          "status": "Done",
+          "owner": "Analytics Engineering",
+          "milestone": "Style guide v2",
+          "due": "2026-10-23"
+        },
+        {
+          "id": "DM-202",
+          "title": "Conformed dimension: part and revision",
+          "status": "Done",
+          "owner": "Analytics Engineering",
+          "milestone": "Add effectivity dates",
+          "due": "2026-11-03"
+        },
+        {
+          "id": "DM-203",
+          "title": "Conformed dimension: work order (Manufacturo)",
+          "status": "Done",
+          "owner": "MES Integration",
+          "milestone": "Backfill 2024 orders",
+          "due": "2026-10-18"
+        },
+        {
+          "id": "DM-204",
+          "title": "Fact: print build telemetry, hourly rollup",
+          "status": "Done",
+          "owner": "Additive Data",
+          "milestone": "Retention policy review",
+          "due": "2026-11-10"
+        },
+        {
+          "id": "DM-205",
+          "title": "Fact: nonconformance (NCR) events",
+          "status": "Done",
+          "owner": "Quality Data",
+          "milestone": "Disposition latency measure",
+          "due": "2026-10-24"
+        },
+        {
+          "id": "DM-206",
+          "title": "Conformed dimension: supplier",
+          "status": "Done",
+          "owner": "Supply Chain Systems",
+          "milestone": "Risk tier attributes",
+          "due": "2026-11-05"
+        },
+        {
+          "id": "DM-207",
+          "title": "Fact: purchase order lines",
+          "status": "Done",
+          "owner": "Supply Chain Systems",
+          "milestone": "Receipt matching",
+          "due": "2026-10-27"
+        },
+        {
+          "id": "DM-208",
+          "title": "Data contracts for MES Kafka topics",
+          "status": "Done",
+          "owner": "Data Platform",
+          "milestone": "Contract test in CI",
+          "due": "2026-10-15"
+        },
+        {
+          "id": "DM-209",
+          "title": "Lightdash semantic layer v1",
+          "status": "Done",
+          "owner": "Analytics Engineering",
+          "milestone": "Metric owner review",
+          "due": "2026-10-22"
+        },
+        {
+          "id": "DM-210",
+          "title": "Fact: test stand runs and outcomes",
+          "status": "In Progress",
+          "owner": "Test Data",
+          "milestone": "Join to vehicle serials",
+          "due": "2026-10-17"
+        },
+        {
+          "id": "DM-211",
+          "title": "Fact: GL actuals vs plan",
+          "status": "In Review",
+          "owner": "Finance Systems",
+          "milestone": "Controller sign-off",
+          "due": "2026-10-10"
+        },
+        {
+          "id": "DM-212",
+          "title": "Inventory snapshot, daily",
+          "status": "In Progress",
+          "owner": "Supply Chain Systems",
+          "milestone": "Reconcile to ERP",
+          "due": "2026-10-24"
+        },
+        {
+          "id": "DM-213",
+          "title": "Power BI report migration, wave 1",
+          "status": "In Progress",
+          "owner": "Analytics Engineering",
+          "milestone": "Retire 14 reports",
+          "due": "2026-10-31"
+        },
+        {
+          "id": "DM-214",
+          "title": "Freshness SLAs and alerting",
+          "status": "In Progress",
+          "owner": "Data Platform",
+          "milestone": "SLA per mart published",
+          "due": "2026-10-20"
+        },
+        {
+          "id": "DM-215",
+          "title": "Fact: labor hours by work center",
+          "status": "Backlog",
+          "owner": "MES Integration",
+          "milestone": "Source mapping",
+          "due": "2026-11-07"
+        },
+        {
+          "id": "DM-216",
+          "title": "Slowly changing BOM history",
+          "status": "Backlog",
+          "owner": "Analytics Engineering",
+          "milestone": "Design review",
+          "due": "2026-11-14"
+        },
+        {
+          "id": "DM-217",
+          "title": "Cost roll-up by vehicle build",
+          "status": "Backlog",
+          "owner": "Finance Systems",
+          "milestone": "Allocation rules",
+          "due": "2026-11-21"
+        },
+        {
+          "id": "DM-218",
+          "title": "Power BI report migration, wave 2",
+          "status": "Backlog",
+          "owner": "Analytics Engineering",
+          "milestone": "Inventory remaining reports",
+          "due": "2026-12-02"
+        },
+        {
+          "id": "DM-219",
+          "title": "Evidence reports for executive briefings",
+          "status": "Backlog",
+          "owner": "Analytics Engineering",
+          "milestone": "Template approval",
+          "due": "2026-12-09"
+        },
+        {
+          "id": "DM-220",
+          "title": "Mart usage analytics",
+          "status": "Backlog",
+          "owner": "Data Platform",
+          "milestone": "Query log export",
+          "due": "2026-12-16"
+        }
+      ]
+    },
+    {
+      "id": "dreamcatcher",
+      "name": "Dreamcatcher",
+      "tagline": "Captures ideas and data requests from across the company and triages the best into scoped work.",
+      "summary": "The intake net for ideas and data requests. Every ask is logged, scored on value, effort and risk, and either scoped into delivery or closed with a reason.",
+      "scope": "Rolling · Enterprise request intake",
+      "workItemLevel": "epic",
+      "trackerUrl": null,
+      "items": [
+        {
+          "id": "DC-301",
+          "title": "Idea and request intake form",
+          "status": "Done",
+          "owner": "Data Product",
+          "milestone": "Add attachment support",
+          "due": "2026-10-30"
+        },
+        {
+          "id": "DC-302",
+          "title": "Triage rubric: value, effort, risk",
+          "status": "Done",
+          "owner": "Data Product",
+          "milestone": "Calibrate with sponsors",
+          "due": "2026-10-16"
+        },
+        {
+          "id": "DC-303",
+          "title": "Weekly triage cadence",
+          "status": "Done",
+          "owner": "Data Architecture",
+          "milestone": "Quarterly retro",
+          "due": "2026-12-18"
+        },
+        {
+          "id": "DC-304",
+          "title": "Request status page",
+          "status": "Done",
+          "owner": "Data Product",
+          "milestone": "Notification emails",
+          "due": "2026-10-23"
+        },
+        {
+          "id": "DC-305",
+          "title": "Duplicate detection on new requests",
+          "status": "In Progress",
+          "owner": "ML Platform",
+          "milestone": "Precision check on 200 asks",
+          "due": "2026-10-19"
+        },
+        {
+          "id": "DC-306",
+          "title": "Sponsor sign-off workflow",
+          "status": "In Review",
+          "owner": "Data Product",
+          "milestone": "Finance approval path",
+          "due": "2026-10-12"
+        },
+        {
+          "id": "DC-307",
+          "title": "Intake analytics: volume, aging, outcomes",
+          "status": "In Progress",
+          "owner": "Analytics Engineering",
+          "milestone": "First monthly readout",
+          "due": "2026-11-02"
+        },
+        {
+          "id": "DC-308",
+          "title": "Chat shortcut for quick requests",
+          "status": "Backlog",
+          "owner": "Data Product",
+          "milestone": "Prototype",
+          "due": "2026-11-09"
+        },
+        {
+          "id": "DC-309",
+          "title": "Quarterly portfolio review pack",
+          "status": "Backlog",
+          "owner": "Data Architecture",
+          "milestone": "Outline",
+          "due": "2026-11-16"
+        },
+        {
+          "id": "DC-310",
+          "title": "Effort estimation model",
+          "status": "Backlog",
+          "owner": "ML Platform",
+          "milestone": "Label historic asks",
+          "due": "2026-11-23"
+        },
+        {
+          "id": "DC-311",
+          "title": "Link requests to delivered work",
+          "status": "Backlog",
+          "owner": "Data Product",
+          "milestone": "Tracker integration spec",
+          "due": "2026-11-30"
+        },
+        {
+          "id": "DC-312",
+          "title": "Request aging alerts",
+          "status": "Backlog",
+          "owner": "Data Platform",
+          "milestone": "Threshold policy",
+          "due": "2026-12-07"
+        },
+        {
+          "id": "DC-313",
+          "title": "Roadmap view for requesters",
+          "status": "Backlog",
+          "owner": "Data Product",
+          "milestone": "Design review",
+          "due": "2026-12-14"
+        },
+        {
+          "id": "DC-314",
+          "title": "Requester satisfaction pulse",
+          "status": "Backlog",
+          "owner": "Data Product",
+          "milestone": "Survey draft",
+          "due": "2027-01-11"
+        },
+        {
+          "id": "DC-315",
+          "title": "Archive and de-duplicate historic asks",
+          "status": "Backlog",
+          "owner": "Data Architecture",
+          "milestone": "Retention decision",
+          "due": "2027-01-18"
+        }
+      ]
+    },
+    {
+      "id": "helias",
+      "name": "Helias",
+      "tagline": "Reliability signals for every pipeline: freshness, uptime, lineage and cost in one place.",
+      "summary": "Platform reliability radiating from one console. Freshness objectives, alert routing, lineage and cost telemetry keep every pipeline observable before anyone has to ask.",
+      "scope": "Q4 2026 · Platform reliability",
+      "workItemLevel": "epic",
+      "trackerUrl": null,
+      "items": [
+        {
+          "id": "HL-401",
+          "title": "Grafana platform dashboards",
+          "status": "Done",
+          "owner": "Platform Ops",
+          "milestone": "Owner walkthroughs",
+          "due": "2026-10-15"
+        },
+        {
+          "id": "HL-402",
+          "title": "Pipeline uptime objectives",
+          "status": "Done",
+          "owner": "Data Platform",
+          "milestone": "Monthly review",
+          "due": "2026-11-03"
+        },
+        {
+          "id": "HL-403",
+          "title": "Alert routing to on-call",
+          "status": "Done",
+          "owner": "Platform Ops",
+          "milestone": "Noise audit",
+          "due": "2026-10-24"
+        },
+        {
+          "id": "HL-404",
+          "title": "Cost telemetry per pipeline",
+          "status": "In Progress",
+          "owner": "Platform Ops",
+          "milestone": "Tag coverage at 90%",
+          "due": "2026-10-21"
+        },
+        {
+          "id": "HL-405",
+          "title": "Lineage graph via OpenLineage",
+          "status": "In Review",
+          "owner": "Data Platform",
+          "milestone": "Spark and dbt emitters live",
+          "due": "2026-10-13"
+        },
+        {
+          "id": "HL-406",
+          "title": "Incident runbooks",
+          "status": "In Progress",
+          "owner": "Platform Ops",
+          "milestone": "Top 10 failure modes",
+          "due": "2026-10-29"
+        },
+        {
+          "id": "HL-407",
+          "title": "Freshness heatmap",
+          "status": "In Progress",
+          "owner": "Analytics Engineering",
+          "milestone": "Embed in mart docs",
+          "due": "2026-10-27"
+        },
+        {
+          "id": "HL-408",
+          "title": "Volume anomaly detection",
+          "status": "Backlog",
+          "owner": "ML Platform",
+          "milestone": "Baseline model",
+          "due": "2026-11-18"
+        },
+        {
+          "id": "HL-409",
+          "title": "Quarterly reliability review",
+          "status": "Backlog",
+          "owner": "Data Architecture",
+          "milestone": "First review",
+          "due": "2026-12-10"
+        },
+        {
+          "id": "HL-410",
+          "title": "Synthetic data checks",
+          "status": "Backlog",
+          "owner": "Data Platform",
+          "milestone": "Check catalog",
+          "due": "2026-11-25"
+        },
+        {
+          "id": "HL-411",
+          "title": "Capacity forecasting",
+          "status": "Backlog",
+          "owner": "Platform Ops",
+          "milestone": "Usage history export",
+          "due": "2026-12-03"
+        },
+        {
+          "id": "HL-412",
+          "title": "Status page for data consumers",
+          "status": "Backlog",
+          "owner": "Data Product",
+          "milestone": "Wireframe",
+          "due": "2026-12-17"
+        }
+      ]
+    },
+    {
+      "id": "data-certification",
+      "name": "Data Certification",
+      "tagline": "Gated checks that certify data assets as decision-grade, with owners, lineage and quality claims.",
+      "summary": "Assets earn decision-grade status by passing gates G0 through G4: a named owner, documented lineage, tested quality claims and a sign-off on what the data can safely decide.",
+      "scope": "FY2026 · Certification register",
+      "workItemLevel": "data asset",
+      "trackerUrl": null,
+      "items": [
+        {
+          "id": "CERT-501",
+          "title": "Work orders (Manufacturo)",
+          "status": "Done",
+          "owner": "Manufacturing Data",
+          "milestone": "G4 annual re-certification",
+          "due": "2027-09-30"
+        },
+        {
+          "id": "CERT-502",
+          "title": "Part master",
+          "status": "Done",
+          "owner": "Engineering Data",
+          "milestone": "G4 annual re-certification",
+          "due": "2027-08-14"
+        },
+        {
+          "id": "CERT-503",
+          "title": "Nonconformance (NCR) events",
+          "status": "Done",
+          "owner": "Quality Data",
+          "milestone": "Claim drift check",
+          "due": "2026-12-01"
+        },
+        {
+          "id": "CERT-504",
+          "title": "Supplier master",
+          "status": "Done",
+          "owner": "Supply Chain Systems",
+          "milestone": "Claim drift check",
+          "due": "2026-12-08"
+        },
+        {
+          "id": "CERT-505",
+          "title": "Purchase orders",
+          "status": "Done",
+          "owner": "Supply Chain Systems",
+          "milestone": "Claim drift check",
+          "due": "2026-12-08"
+        },
+        {
+          "id": "CERT-506",
+          "title": "Print build summary",
+          "status": "Done",
+          "owner": "Additive Data",
+          "milestone": "Lineage refresh",
+          "due": "2026-11-12"
+        },
+        {
+          "id": "CERT-507",
+          "title": "GL actuals",
+          "status": "Done",
+          "owner": "Finance Systems",
+          "milestone": "Close-cycle audit",
+          "due": "2026-10-31"
+        },
+        {
+          "id": "CERT-508",
+          "title": "Test stand runs",
+          "status": "In Progress",
+          "owner": "Test Data",
+          "milestone": "G3 quality claims",
+          "due": "2026-10-22"
+        },
+        {
+          "id": "CERT-509",
+          "title": "Inventory snapshot",
+          "status": "In Progress",
+          "owner": "Supply Chain Systems",
+          "milestone": "G2 lineage documented",
+          "due": "2026-10-19"
+        },
+        {
+          "id": "CERT-510",
+          "title": "Labor hours",
+          "status": "In Review",
+          "owner": "Manufacturing Data",
+          "milestone": "G4 owner sign-off",
+          "due": "2026-10-11"
+        },
+        {
+          "id": "CERT-511",
+          "title": "BOM history",
+          "status": "Backlog",
+          "owner": "Engineering Data",
+          "milestone": "G0 owner named",
+          "due": "2026-11-06"
+        },
+        {
+          "id": "CERT-512",
+          "title": "Cost roll-up by vehicle build",
+          "status": "Backlog",
+          "owner": "Finance Systems",
+          "milestone": "G0 owner named",
+          "due": "2026-11-20"
+        },
+        {
+          "id": "CERT-513",
+          "title": "Engine test telemetry",
+          "status": "Backlog",
+          "owner": "Test Data",
+          "milestone": "G0 owner named",
+          "due": "2026-11-13"
+        },
+        {
+          "id": "CERT-514",
+          "title": "Quality inspections",
+          "status": "Backlog",
+          "owner": "Quality Data",
+          "milestone": "G0 owner named",
+          "due": "2026-11-27"
+        },
+        {
+          "id": "CERT-515",
+          "title": "Shipping and receiving",
+          "status": "Backlog",
+          "owner": "Supply Chain Systems",
+          "milestone": "Scoping",
+          "due": "2026-12-04"
+        },
+        {
+          "id": "CERT-516",
+          "title": "Budget plan",
+          "status": "Backlog",
+          "owner": "Finance Systems",
+          "milestone": "Scoping",
+          "due": "2026-12-11"
+        },
+        {
+          "id": "CERT-517",
+          "title": "Headcount (restricted)",
+          "status": "Backlog",
+          "owner": "People Systems",
+          "milestone": "Access policy review",
+          "due": "2027-01-08"
+        },
+        {
+          "id": "CERT-518",
+          "title": "Tooling calibration",
+          "status": "Backlog",
+          "owner": "Manufacturing Data",
+          "milestone": "Scoping",
+          "due": "2027-01-15"
+        },
+        {
+          "id": "CERT-519",
+          "title": "Customer milestones",
+          "status": "Backlog",
+          "owner": "Program Management",
+          "milestone": "Scoping",
+          "due": "2027-01-22"
+        }
+      ]
+    }
+  ]
+}
